@@ -1,0 +1,16 @@
+---
+import { getCollection } from 'astro:content';
+import Layout from '../layouts/Layout.astro';
+
+const games = await getCollection('games');
+---
+
+<Layout title="Keystatic & Astro's Content Collections">
+  <div>
+    <ul>
+      {games.map(game => {
+        return <li><a href={`/games/${game.id}`}>{game.data.title}</a></li>
+      })}
+    </ul>
+  </div>
+</Layout>
