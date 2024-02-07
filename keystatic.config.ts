@@ -2,11 +2,10 @@ import { config, fields, collection } from '@keystatic/core';
 
 export default config({
   storage: {
-    kind: 'github',
-    repo: {
-      owner: 'ChristianSantanaLlanes',
-      name: 'astro-web-game-videogame'
-    }
+    kind: 'cloud',
+    cloud: {
+      project: 'game/astro-web-game',
+    },
   },
   ui: {
     brand: {
